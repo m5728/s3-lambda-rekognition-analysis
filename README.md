@@ -1,4 +1,4 @@
-Serverless Image Processing Workflow with AWS Lambda, Rekognition, DynamoDB, SNS and S3
+## Serverless Image Processing Workflow with AWS Lambda, Rekognition, DynamoDB, SNS and S3
 
 This project demonstrates a serverless workflow for automatically analyzing images uploaded to an S3 bucket.
 

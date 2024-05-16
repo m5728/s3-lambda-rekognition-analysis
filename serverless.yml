@@ -1,0 +1,15 @@
+service: image-processing-workflow
+
+functions:
+  imageProcessor:
+    runtime: nodejs20.x # Replace with your preferred runtime (e.g., nodejs14.x)
+    handler: <YOUR_HANDLER_FUNCTION_NAME> # Replace with your actual handler function name
+    codeuri: ./lambda/ # Replace with the path to your Lambda function code
+    events:
+      s3:
+        bucket: <S3_BUCKET_NAME_PLACEHOLDER> # Replace with a placeholder (optional)
+        event: put # Trigger on object upload
+
+# Provider configuration (sensitive information should be stored elsewhere)
+provider:
+  name: aws

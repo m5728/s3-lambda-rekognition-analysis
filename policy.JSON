@@ -1,0 +1,41 @@
+{
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Action": [
+				"s3:GetObject"
+			],
+			"Resource": "YourBucketARN"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"dynamodb:PutItem"
+			],
+			"Resource": "YourTableARN"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"rekognition:DetectLabels"
+			],
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"sns:Publish"
+			],
+			"Resource": "YourSNSTopicARN"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"logs:CreateLogGroup",
+				"logs:CreateLogStream",
+				"logs:PutLogEvents"
+			],
+			"Resource": "*"
+		}
+	]
+}
